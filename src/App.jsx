@@ -9,6 +9,7 @@ import {
 import Home from "./pages/Home";
 import CanIGiveBlood from "./pages/CanIGiveBlood";
 import LandingScreen from "./pages/LandingScreen";
+import NavBar from "./components/NavBar";
 
 function App() {
 	return (
