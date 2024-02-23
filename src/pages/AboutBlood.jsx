@@ -1,37 +1,83 @@
 import React from "react";
-import Carousel from "react-bootstrap/Carousel";
+import { Carousel } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "../styles/AboutBlood.styles.css";
 
-function AboutBlood() {
+const CustomCarousel = () => {
 	return (
-		<>
-			<Carousel>
-				<Carousel.Item interval={2000}>
-					<img class="d-block w-100" src="..." alt="First slide" />
-					<Carousel.Caption>
-						<h3>First slide label</h3>
-						<p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-					</Carousel.Caption>
-				</Carousel.Item>
-				<Carousel.Item interval={2000}>
-					<img class="d-block w-100" src="..." alt="Second slide" />{" "}
-					<Carousel.Caption>
-						<h3>Second slide label</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-					</Carousel.Caption>
-				</Carousel.Item>
-				<Carousel.Item interval={2000}>
-					<img class="d-block w-100" src="..." alt="Third slide" />{" "}
-					<Carousel.Caption>
-						<h3>Third slide label</h3>
-						<p>
-							Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-						</p>
-					</Carousel.Caption>
-				</Carousel.Item>
-			</Carousel>
-		</>
+		<div>
+			<div className="outer-carousel-container">
+				<Carousel className="slider-container">
+					<Carousel.Item interval={2000} className="slider">
+						<div className="row d-flex align-items-center mx-auto slider-three  img-container">
+							<div className="col-md-6 ps-lg-5 pt-4  pt-lg-5 text-container">
+								<h1>Are You Ready to Give?</h1>
+								<p>
+									Discover if you're eligible to become a life-saver today. Our
+									quick check ensures your donation is safe for you and
+									recipients
+								</p>
+								<button className="btn btn-primary custom-about">
+									Learn More
+								</button>
+							</div>
+							<div className="col-md-6  pt-sm-4 img-container">
+								<img
+									src="src/img/image1.png"
+									className="d-block w-100 img-fluid pt-sm-1 "
+									alt=""
+								/>
+							</div>
+						</div>
+					</Carousel.Item>
+					<Carousel.Item interval={2000} className="slider">
+						<div className="row d-flex align-items-center mx-auto slider-three  img-container">
+							<div className="col-md-6 ps-lg-5 pt-4  pt-lg-5 text-container">
+								<h1>Are You Ready to Give?</h1>
+								<p>
+									Discover if you're eligible to become a life-saver today. Our
+									quick check ensures your donation is safe for you and
+									recipients
+								</p>
+								<button className="btn btn-primary custom-about">
+									Learn More
+								</button>
+							</div>
+							<div className="col-md-6  pt-sm-4 img-container">
+								<img
+									src="src/img/image1.png"
+									className="d-block w-100 img-fluid pt-sm-1 "
+									alt=""
+								/>
+							</div>
+						</div>
+					</Carousel.Item>
+					<Carousel.Item interval={2000} className="slider">
+						<div className="row d-flex align-items-center mx-auto slider-three  img-container">
+							<div className="col-md-6 ps-lg-5 pt-4 pt-lg-5 text-container">
+								<h1>Are You Ready to Give?</h1>
+								<p>
+									Discover if you're eligible to become a life-saver today. Our
+									quick check ensures your donation is safe for you and
+									recipients
+								</p>
+								<button className="btn btn-primary custom-about">
+									Learn More
+								</button>
+							</div>
+							<div className="col-md-6  pt-sm-4 img-container">
+								<img
+									src="src/img/image1.png"
+									className="d-block w-100 img-fluid pt-sm-1 "
+									alt=""
+								/>
+							</div>
+						</div>
+					</Carousel.Item>
+				</Carousel>
+			</div>
+		</div>
 	);
-}
+};
 
-export default AboutBlood;
+export default CustomCarousel;
