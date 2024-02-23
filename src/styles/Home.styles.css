@@ -33,13 +33,16 @@
 }
 .custom-btn {
 	margin-left: 2px;
-	background-color: #a3152d !important;
+	background-color: rgb(185, 26, 26) !important;
 }
 
 .custom-btn:hover {
-	background-color: #5e0023 !important;
+	background-color: #a3152d !important;
 }
 .form-control:focus {
 	box-shadow: 0 0 5px 1px rgb(163, 21, 45);
 	outline: rgba(163, 21, 45, 0.6);
+}
+.header-text {
+	flex-wrap: nowrap;
 }
