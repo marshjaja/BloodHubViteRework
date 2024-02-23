@@ -203,10 +203,10 @@ a:focus .enter-site {
 }
 
 .main-container {
-	max-width: 1400px;
+	/* max-width: 1400px;
 	margin: 0 auto;
 	padding: 2rem;
-	max-width: 1280px;
+	max-width: 1280px; */
 }
 
 .nav-link-hover {
