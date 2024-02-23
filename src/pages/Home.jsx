@@ -16,7 +16,7 @@ function Home() {
 							aria-describedby="inputGroup-sizing-sm"
 							className="custom-form-control"
 						/>
-						<Button type="submit" className="btn custom-btn">
+						<Button type="submit" className="btn btn-primary">
 							Search
 						</Button>
 					</InputGroup>
