@@ -20,13 +20,13 @@
 	width: 100%;
 }
 
-.btn-primary {
+.custom-btn {
 	margin-left: 2px;
 	background-color: #a3152d !important;
 	border: none;
 	box-shadow: 2px 2px 2px rgba(14, 14, 13, 0.944);
 }
-.btn-primary:hover {
+.custom-btn:hover {
 	margin-left: 2px;
 	background-color: #5e0023 !important;
 	border: none;
