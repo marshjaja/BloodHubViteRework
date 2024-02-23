@@ -2,6 +2,7 @@ import React from "react";
 import { Button } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import BgVideo from "../videos/bgvideo.mp4";
+import "../styles/LandingScreen.styles.css";
 
 function LandingScreen() {
 	return (
