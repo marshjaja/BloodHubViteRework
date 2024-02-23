@@ -1,0 +1,34 @@
+.home-background {
+	background-image: url("/src/img/image1.png");
+	background-size: cover;
+	background-position: center;
+	width: 100%;
+	height: 60vh;
+}
+.content-container {
+	max-width: 1280px;
+	margin: 0 auto;
+	padding: 2rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+}
+.custom-input-group {
+	margin-top: 200px;
+	max-width: 600px;
+	width: 100%;
+}
+
+.custom-btn {
+	margin-left: 2px;
+	background-color: #a3152d !important;
+	border: none;
+	box-shadow: 2px 2px 2px rgba(14, 14, 13, 0.944);
+}
+.custom-btn:hover {
+	margin-left: 2px;
+	background-color: #5e0023 !important;
+	border: none;
+	box-shadow: 2px 2px 2px rgba(14, 14, 13, 0.944);
+}
