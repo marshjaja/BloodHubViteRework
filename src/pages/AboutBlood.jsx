@@ -2,6 +2,7 @@ import React from "react";
 import { Carousel } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles/AboutBlood.styles.css";
+import Image1 from "/src/img/image1.png";
 
 const CustomCarousel = () => {
 	return (
@@ -23,7 +24,7 @@ const CustomCarousel = () => {
 							</div>
 							<div className="col-md-6  pt-sm-4 img-container">
 								<img
-									src="src/img/image1.png"
+									src={Image1}
 									className="d-block w-100 img-fluid pt-sm-1 "
 									alt=""
 								/>
@@ -45,7 +46,7 @@ const CustomCarousel = () => {
 							</div>
 							<div className="col-md-6  pt-sm-4 img-container">
 								<img
-									src="src/img/image1.png"
+									src={Image1}
 									className="d-block w-100 img-fluid pt-sm-1 "
 									alt=""
 								/>
@@ -67,7 +68,7 @@ const CustomCarousel = () => {
 							</div>
 							<div className="col-md-6  pt-sm-4 img-container">
 								<img
-									src="src/img/image1.png"
+									src={Image1}
 									className="d-block w-100 img-fluid pt-sm-1 "
 									alt=""
 								/>
