@@ -6,6 +6,7 @@ import {
 	useLoadScript,
 	InfoWindow,
 	InfoWindowF,
+	InfoWindowF,
 } from "@react-google-maps/api";
 import "../styles/BloodCentres.styles.css";
 import Icon from "../img/bloodicon.png";
@@ -93,18 +94,18 @@ const BloodCentres = () => {
 		setActiveMarker(places);
 	};
 
+	const [activeMarker, setActiveMarker] = useState(null);
+	const handleActiveMarker = (places) => {
+		if (places === activeMarker) {
+			return;
+		}
+		setActiveMarker(places);
+	};
+
 	useEffect(() => {
 		console.log("Updated places state:", places);
 	}, [places]);
 
-	const BloodDonationIcon = {
-		url: Icon,
-		scaledSize: new window.google.maps.Size(40, 40),
-	};
-	const UserIcon = {
-		url: Icon1,
-		scaledSize: new window.google.maps.Size(40, 40),
-	};
 	return (
 		<div className="container">
 			<div className="controls">
@@ -179,7 +180,10 @@ const BloodCentres = () => {
 							<MarkerF
 								position={userLocation}
 								onClick={() => setShowUserLocationInfo(true)}
-								icon={UserIcon}
+								icon={{
+									url: Icon1,
+									scaledSize: { width: 50, height: 50 },
+								}}
 							/>
 						)}
 
