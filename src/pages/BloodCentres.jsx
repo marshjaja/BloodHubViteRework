@@ -186,6 +186,6 @@ const BloodCentres = () => {
 			)}
 		</div>
 	);
-};
+}
 
 export default BloodCentres;
