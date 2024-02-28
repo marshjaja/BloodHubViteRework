@@ -32,10 +32,15 @@ const BloodCentres = () => {
 		}
 	};
 
+	console.log("API Key:", import.meta.env.VITE_MAP_API_KEY);
+
 	const { isLoaded } = useLoadScript({
 		googleMapsApiKey: import.meta.env.VITE_MAP_API_KEY,
 		libraries,
 	});
+	useEffect(() => {
+		console.log("Google Maps API loaded:", isLoaded);
+	}, [isLoaded]);
 
 	const handleSearch = () => {
 		const geocoder = new window.google.maps.Geocoder();
