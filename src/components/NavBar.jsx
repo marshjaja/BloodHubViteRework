@@ -90,6 +90,13 @@ function NavBar() {
 						>
 							Contact Us
 						</Nav.Link>
+						<Nav.Link
+							as={Link}
+							className="me-3 nav-link-hover"
+							to="/where-to-donate"
+						>
+							Donate here
+						</Nav.Link>
 					</Nav>
 				</Navbar.Collapse>
 			</Container>

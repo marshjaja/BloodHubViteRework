@@ -13,6 +13,7 @@ import CanIGiveBlood from "./pages/CanIGiveBlood";
 import LandingScreen from "./pages/LandingScreen";
 import NavBar from "./components/NavBar";
 import AboutBlood from "./pages/AboutBlood";
+import BloodCentres from "./components/BloodCentres";
 
 function App() {
 	return (
@@ -33,6 +34,7 @@ function AppContent() {
 				<Routes>
 					<Route path="/" element={<LandingScreen />} />
 					<Route path="/home" element={<Home />} />
+					<Route path="/where-to-donate" element={<BloodCentres />} />
 					<Route path="/about-blood" element={<AboutBlood />} />
 					<Route path="/can-i-give-blood" element={<CanIGiveBlood />} />
 				</Routes>
