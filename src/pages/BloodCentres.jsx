@@ -122,6 +122,9 @@ const BloodCentres = () => {
 						{places.map((place) => (
 							<MarkerF
 								key={place.place_id}
+								onClick={() => {
+									setSelectedPlace(place);
+								}}
 								position={{
 									lat: place.geometry.location.lat(),
 									lng: place.geometry.location.lng(),
