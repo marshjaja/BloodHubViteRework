@@ -10,6 +10,7 @@ import {
 } from "@react-google-maps/api";
 import "../styles/BloodCentres.styles.css";
 import Icon from "../img/bloodicon.png";
+import Icon from "../img/bloodicon.png";
 import Icon1 from "../img/you-are-here.png";
 
 const center = { lat: 51.5074, lng: -0.1278 };
@@ -141,6 +142,7 @@ const BloodCentres = () => {
 								icon={{
 									url: Icon,
 									scaledSize: { width: 32, height: 32 },
+									scaledSize: { width: 32, height: 32 },
 								}}
 							>
 								{activeMarker === place ? (
@@ -182,9 +184,20 @@ const BloodCentres = () => {
 								onClick={() => setShowUserLocationInfo(true)}
 								icon={{
 									url: Icon1,
-									scaledSize: { width: 50, height: 50 },
+									scaledSize: { width: 34, height: 34 },
 								}}
 							/>
+						)}
+
+						{showUserLocationInfo && userLocation && (
+							<InfoWindow
+								position={userLocation}
+								onCloseClick={() => setShowUserLocationInfo(false)}
+							>
+								<div>
+									<p>You are here!</p>
+								</div>
+							</InfoWindow>
 						)}
 
 						{showUserLocationInfo && userLocation && (
