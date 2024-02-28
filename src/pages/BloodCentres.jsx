@@ -55,6 +55,8 @@ const BloodCentres = () => {
 				setIsValidPostcode(true);
 				panToLocation(location);
 				setUserLocation(location);
+				panToLocation(location);
+				setUserLocation(location);
 			} else {
 				setIsValidPostcode(false);
 				console.error(
@@ -95,6 +97,14 @@ const BloodCentres = () => {
 		console.log("Updated places state:", places);
 	}, [places]);
 
+	const BloodDonationIcon = {
+		url: Icon,
+		scaledSize: new window.google.maps.Size(40, 40),
+	};
+	const UserIcon = {
+		url: Icon1,
+		scaledSize: new window.google.maps.Size(40, 40),
+	};
 	return (
 		<div className="container">
 			<div className="controls">
@@ -122,9 +132,6 @@ const BloodCentres = () => {
 						{places.map((place) => (
 							<MarkerF
 								key={place.place_id}
-								onClick={() => {
-									setSelectedPlace(place);
-								}}
 								position={{
 									lat: place.geometry.location.lat(),
 									lng: place.geometry.location.lng(),
@@ -154,6 +161,25 @@ const BloodCentres = () => {
 									url: Icon1,
 									scaledSize: { width: 34, height: 34 },
 								}}
+							/>
+						)}
+
+						{showUserLocationInfo && userLocation && (
+							<InfoWindow
+								position={userLocation}
+								onCloseClick={() => setShowUserLocationInfo(false)}
+							>
+								<div>
+									<p>You are here!</p>
+								</div>
+							</InfoWindow>
+						)}
+
+						{userLocation && (
+							<MarkerF
+								position={userLocation}
+								onClick={() => setShowUserLocationInfo(true)}
+								icon={UserIcon}
 							/>
 						)}
 
