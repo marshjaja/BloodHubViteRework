@@ -90,7 +90,17 @@ const BloodCentres = () => {
 						zoom={13}
 						onLoad={onLoad}
 						mapContainerClassName="map-container"
-					></GoogleMap>
+					>
+						{places.map((place) => (
+							<MarkerF
+								key={place.place_id}
+								position={{
+									lat: place.geometry.location.lat(),
+									lng: place.geometry.location.lng(),
+								}}
+							/>
+						))}
+					</GoogleMap>
 				</div>
 			)}
 		</div>
