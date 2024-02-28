@@ -15,6 +15,7 @@ const BloodCentres = () => {
 	const [postcode, setPostcode] = useState("");
 	const [isValidPostcode, setIsValidPostcode] = useState(true);
 	const [places, setPlaces] = useState([]);
+	const [selectedPlace, setSelectedPlace] = useState(null);
 
 	const mapRef = useRef(null);
 	const onLoad = useCallback((map) => (mapRef.current = map), []);
@@ -94,12 +95,30 @@ const BloodCentres = () => {
 						{places.map((place) => (
 							<MarkerF
 								key={place.place_id}
+								onClick={() => {
+									setSelectedPlace(place);
+								}}
 								position={{
 									lat: place.geometry.location.lat(),
 									lng: place.geometry.location.lng(),
 								}}
 							/>
 						))}
+						{selectedPlace && (
+							<InfoWindow
+								position={{
+									lat: selectedPlace.geometry.location.lat(),
+									lng: selectedPlace.geometry.location.lng(),
+								}}
+							>
+								<div>
+									<h2>{selectedPlace.name}</h2>
+									<p>{selectedPlace.vicinity}</p>
+									<p>{selectedPlace.rating}</p>
+									<button onClick={() => setSelectedPlace("")}>close</button>
+								</div>
+							</InfoWindow>
+						)}
 					</GoogleMap>
 				</div>
 			)}
