@@ -5,6 +5,7 @@ import {
 	MarkerF,
 	useLoadScript,
 	InfoWindow,
+	InfoWindowF,
 } from "@react-google-maps/api";
 import "../styles/BloodCentres.styles.css";
 import Icon from "../img/bloodthanks.jpeg";
@@ -77,18 +78,18 @@ const BloodCentres = () => {
 		);
 	};
 
+	const [activeMarker, setActiveMarker] = useState(null);
+	const handleActiveMarker = (places) => {
+		if (places === activeMarker) {
+			return;
+		}
+		setActiveMarker(places);
+	};
+
 	useEffect(() => {
 		console.log("Updated places state:", places);
 	}, [places]);
 
-	const BloodDonationIcon = {
-		url: Icon,
-		scaledSize: new window.google.maps.Size(40, 40),
-	};
-	const UserIcon = {
-		url: Icon1,
-		scaledSize: new window.google.maps.Size(40, 40),
-	};
 	return (
 		<div className="container">
 			<div className="controls">
@@ -116,22 +117,33 @@ const BloodCentres = () => {
 						{places.map((place) => (
 							<MarkerF
 								key={place.place_id}
-								icon={BloodDonationIcon}
 								position={{
 									lat: place.geometry.location.lat(),
 									lng: place.geometry.location.lng(),
 								}}
-								onClick={() => {
-									setSelectedPlace(place);
+								onClick={() => handleActiveMarker(place)}
+								icon={{
+									url: Icon,
+									scaledSize: { width: 50, height: 50 },
 								}}
-							/>
+							>
+								{activeMarker === place ? (
+									<InfoWindowF onCloseClick={() => setActiveMarker(null)}>
+										<div>
+											<p>{name}</p>
+										</div>
+									</InfoWindowF>
+								) : null}
+							</MarkerF>
 						))}
-
 						{userLocation && (
 							<MarkerF
 								position={userLocation}
 								onClick={() => setShowUserLocationInfo(true)}
-								icon={UserIcon}
+								icon={{
+									url: Icon1,
+									scaledSize: { width: 50, height: 50 },
+								}}
 							/>
 						)}
 
