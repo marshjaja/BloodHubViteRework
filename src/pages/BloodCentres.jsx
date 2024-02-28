@@ -133,11 +133,13 @@ const BloodCentres = () => {
 								}}
 							>
 								{activeMarker === place ? (
-									<InfoWindowF onCloseClick={() => setActiveMarker(null)}>
+									<InfoWindow onCloseClick={() => setActiveMarker(null)}>
 										<div>
-											<p>{name}</p>
+											<h1>{place.name}</h1>
+											<p>{place.vicinity}</p>
+											<p>{place.rating}</p>
 										</div>
-									</InfoWindowF>
+									</InfoWindow>
 								) : null}
 							</MarkerF>
 						))}
