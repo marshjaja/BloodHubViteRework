@@ -23,7 +23,7 @@ const CustomCarousel = () => {
 									B, or AB, your donation can make a world of difference in
 									emergencies and surgeries
 								</p>
-								<button className="btn btn-primary custom-about">
+								<button className="btn btn-primary about-btn">
 									Learn More
 								</button>
 							</div>
@@ -45,7 +45,7 @@ const CustomCarousel = () => {
 									quick check ensures your donation is safe for you and
 									recipients
 								</p>
-								<button className="btn btn-primary custom-about">
+								<button className="btn btn-primary about-btn">
 									Learn More
 								</button>
 							</div>
@@ -67,7 +67,7 @@ const CustomCarousel = () => {
 									donation taking mere minutes. Your comfort and safety are our
 									top priority throughout
 								</p>
-								<button className="btn btn-primary custom-about">
+								<button className="btn btn-primary about-btn">
 									Learn More
 								</button>
 							</div>
@@ -90,7 +90,7 @@ const CustomCarousel = () => {
 									medical research and healthcare training. Together, we're
 									innovating for healthier futures
 								</p>
-								<button className="btn btn-primary custom-about">
+								<button className="btn btn-primary about-btn">
 									Learn More
 								</button>
 							</div>
