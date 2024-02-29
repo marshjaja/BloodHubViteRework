@@ -12,7 +12,10 @@
 
 .map-container {
 	width: 100%;
-	height: 100vh;
+	height: 70vh;
+	margin: 1rem;
+	border-radius: 1rem;
+	border: 2px solid rgba(163, 21, 45, 0.6);
 }
 
 .map {
