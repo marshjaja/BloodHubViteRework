@@ -25,13 +25,7 @@ img {
 	border: none;
 	margin-left: 2px;
 	background-color: #ffffff;
-
-	/* background-color: #fc4a68; */
-	/* background-color: #ef8aca; */
-	/* background-color: #ff7f11;
-	background-color: #d8c89e; */
-	/* background-color: #5ab7d4; */
-	/* background-color: #fcba04; */
+	margin-bottom: 1rem;
 	margin-bottom: 1rem;
 	color: rgb(6, 6, 6);
 	box-shadow: 2px 2px 2px #09090997;
@@ -43,6 +37,13 @@ img {
 .carousel-control-next-icon,
 .carousel-control-prev-icon {
 	display: none;
+}
+.carousel-control-prev {
+	left: -100px;
+}
+
+.carousel-control-next {
+	right: -100px;
 }
 
 @media (min-width: 767px) {
