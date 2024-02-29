@@ -1,5 +1,13 @@
 import React from "react";
-import { Image, Form, Button, InputGroup, FormControl } from "react-bootstrap";
+import {
+	Image,
+	Form,
+	Button,
+	InputGroup,
+	FormControl,
+	Nav,
+} from "react-bootstrap";
+import { Link } from "react-router-dom";
 import Image1 from "../img/image1.png";
 import "../styles/Home.styles.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -11,20 +19,34 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 function Home() {
+	const handleSearch = (e) => {
+		e.preventDefault();
+		const searchInput = e.target.elements.search.value; // Adjust based on your input field's name or ID
+		setSearchTerm(searchInput);
+	};
 	return (
 		<>
 			<div className="home-background">
 				<div className="content-container">
-					<InputGroup size="lg" className="custom-input-group">
+					<div className="row">
+						<div className="col-6 col-lg-3 d-flex justify-content-center">
+							{/* <InputGroup size="lg" className="custom-input-group">
 						<FormControl
 							aria-label="Large"
 							aria-describedby="inputGroup-sizing-sm"
 							className="custom-form-control"
-						/>
-						<Button type="submit" className="btn custom-btn">
-							Search
+						/> */}
+							<h1>Hello</h1>
+						</div>
+						{/* <Button type="submit" className="btn custom-btn">
+						Search
+					</Button> */}
+						<div className="col-6 col-lg-3 d-flex justify-content-center"></div>
+						<Button as={Link} className="" to="/where-to-donate">
+							Where to Donate
 						</Button>
-					</InputGroup>
+						{/* </InputGroup> */}
+					</div>
 				</div>
 			</div>
 			<div className="container text-center">
