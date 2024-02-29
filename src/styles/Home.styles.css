@@ -65,3 +65,28 @@
 .circle:hover {
 	transform: scale(1.1);
 }
+
+.home-text {
+	margin-top: 10rem;
+	padding: 1rem;
+	background: rgba(255, 255, 255, 0.13);
+	border-radius: 16px;
+	box-shadow: 1px 1px 2px #09090997;
+	backdrop-filter: blur(5.6px);
+	-webkit-backdrop-filter: blur(5.6px);
+	border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.home-btn {
+	border: none;
+	margin-left: 2px;
+	border: 1px solid #5e0023;
+	background-color: #5e0023;
+	color: rgb(255, 254, 254);
+	box-shadow: 2px 2px 2px #09090997;
+}
+.home-btn:hover {
+	background-color: #ffffff !important;
+	border-color: transparent;
+	color: black;
+}
