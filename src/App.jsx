@@ -14,6 +14,7 @@ import LandingScreen from "./pages/LandingScreen";
 import NavBar from "./components/NavBar";
 import AboutBlood from "./pages/AboutBlood";
 import BloodCentres from "./pages/BloodCentres";
+import Footer from "./components/Footer";
 
 function App() {
 	return (
@@ -39,6 +40,7 @@ function AppContent() {
 					<Route path="/can-i-give-blood" element={<CanIGiveBlood />} />
 				</Routes>
 			</main>
+			<Footer />
 		</>
 	);
 }
