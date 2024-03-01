@@ -14,7 +14,7 @@ function NavBar() {
 			expanded={expanded}
 		>
 			{/* <Container> */}
-			<Container fluid>
+			<Container fluid className="mx-5 my-2">
 				<Navbar.Brand
 					as={Link}
 					to="/"

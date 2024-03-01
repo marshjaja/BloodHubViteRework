@@ -14,7 +14,7 @@
 	align-items: center;
 	height: 100%;
 }
-.custom-input-group {
+/* .custom-input-group {
 	margin-top: 200px;
 	border-radius: 10px;
 	max-width: 600px;
@@ -46,7 +46,7 @@
 .form-control:focus {
 	box-shadow: 0 0 5px 1px rgb(163, 21, 45);
 	outline: rgba(163, 21, 45, 0.6);
-}
+} */
 .header-text {
 	flex-wrap: nowrap;
 }
