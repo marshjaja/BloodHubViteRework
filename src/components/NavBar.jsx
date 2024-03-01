@@ -78,26 +78,22 @@ function NavBar() {
 						</Nav.Link>
 						<Nav.Link
 							as={Link}
-							className="me-3 nav-link-hover"
+							className="me-5 nav-link-hover"
 							to="/can-i-give-blood"
 						>
 							Eligibility Quiz
 						</Nav.Link>
 						<Nav.Link
 							as={Link}
-							className="me-3 nav-link-hover"
-							to="/contact-us"
-						>
-							Contact Us
-						</Nav.Link>
-						<Nav.Link
-							as={Link}
-							className="me-3 nav-link-hover"
+							className="me-5 nav-link-hover"
 							to="/where-to-donate"
 						>
 							Where to Donate
 						</Nav.Link>
 					</Nav>
+					<Nav.Link as={Link} className="me-3 nav-link-hover" to="/contact-us">
+						Contact Us
+					</Nav.Link>
 				</Navbar.Collapse>
 			</Container>
 		</Navbar>
