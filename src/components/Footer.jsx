@@ -23,10 +23,15 @@ function Footer() {
 				style={{ backgroundColor: " #5e0023", color: "rgb(255, 255, 255) " }}
 			>
 				<div className="row row-cols-1 row-cols-sm-1 row-cols-md-4">
-					{/* <div className="row "> */}
 					<div className="col-12 col-lg-3 mt-5">
-						<div className="icon-container d-flex justify-content-center align-content-center  my-3 ">
-							<Image src={Logo} width={50} />
+						<div className="icon-container d-flex flex-column justify-content-center align-items-center my-3">
+							<div style={{ width: "13%" }}>
+								<Image
+									src={Logo}
+									width={50}
+									style={{ display: "block", margin: "0 auto" }}
+								/>
+							</div>
 							<h3>BloodHub</h3>
 						</div>
 					</div>
