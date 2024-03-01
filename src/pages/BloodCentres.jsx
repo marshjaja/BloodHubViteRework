@@ -6,10 +6,8 @@ import {
 	useLoadScript,
 	InfoWindow,
 	InfoWindowF,
-	InfoWindowF,
 } from "@react-google-maps/api";
 import "../styles/BloodCentres.styles.css";
-import Icon from "../img/bloodicon.png";
 import Icon from "../img/bloodicon.png";
 import Icon1 from "../img/you-are-here.png";
 import { Button, FormControl, InputGroup } from "react-bootstrap";
@@ -58,8 +56,6 @@ const BloodCentres = () => {
 				setIsValidPostcode(true);
 				panToLocation(location);
 				setUserLocation(location);
-				panToLocation(location);
-				setUserLocation(location);
 			} else {
 				setIsValidPostcode(false);
 				console.error(
@@ -86,14 +82,6 @@ const BloodCentres = () => {
 				}
 			}
 		);
-	};
-
-	const [activeMarker, setActiveMarker] = useState(null);
-	const handleActiveMarker = (places) => {
-		if (places === activeMarker) {
-			return;
-		}
-		setActiveMarker(places);
 	};
 
 	const [activeMarker, setActiveMarker] = useState(null);
