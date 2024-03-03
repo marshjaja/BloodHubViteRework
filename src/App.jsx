@@ -40,7 +40,7 @@ function AppContent() {
 					<Route path="/can-i-give-blood" element={<CanIGiveBlood />} />
 				</Routes>
 			</main>
-			<Footer />
+			{isNotLandingPage && <Footer />}
 		</>
 	);
 }

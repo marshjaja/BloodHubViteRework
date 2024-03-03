@@ -1,14 +1,6 @@
 import React from "react";
-import {
-	Image,
-	Form,
-	Button,
-	InputGroup,
-	FormControl,
-	Nav,
-} from "react-bootstrap";
+import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import Image1 from "../img/image1.png";
 import "../styles/Home.styles.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -19,11 +11,6 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 function Home() {
-	const handleSearch = (e) => {
-		e.preventDefault();
-		const searchInput = e.target.elements.search.value; // Adjust based on your input field's name or ID
-		setSearchTerm(searchInput);
-	};
 	return (
 		<>
 			<div className="home-background">
