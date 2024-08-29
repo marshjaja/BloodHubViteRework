@@ -1,8 +1,5 @@
-# React + Vite
+## BloodHub 🚧🏗️👩🏾‍🔧
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+ <a href="https://bloodhubvite24.netlify.app/">View Deploy Link</a>
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Note: This project is currently under construction. I am in the process of refactoring an old group project to improve its structure and functionality.
